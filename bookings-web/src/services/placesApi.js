@@ -1,5 +1,6 @@
 export const getPlaces = async () => {
-  const response = await fetch(`${process.env.BASE_URL}/places`);
+  const response = await fetch('http://localhost:7890/api/v1/places');
+  // (`${process.env.BASE_URL}/places`);
   if (response.ok) {
     const result = await response.json();
     return result.map(
@@ -23,8 +24,9 @@ export const getPlaces = async () => {
 };
 
 export const getOnePlace = async(id) => { 
-  const response = await fetch(`${process.env.BASE_URL}/places/${id}`)
-  // (`http://localhost:7890/api/v1/places/${id}`);
+  const response = await fetch(`http://localhost:7890/api/v1/places/${id}`);
+  // (`${process.env.BASE_URL}/places/${id}`)
+  
   const onePlace = response.json();
   console.log(onePlace);
 

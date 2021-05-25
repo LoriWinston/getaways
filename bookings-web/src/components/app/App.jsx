@@ -1,10 +1,12 @@
 import React from 'react';
+import '../app/App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Getaways from '../../containers/Getaways';
 import Header from '../ui-section/Header';
 import LoginPage from '../ui-section/LoginPage';
 import HomePage from '../ui-section/HomePage';
 import SignUpPage from '../ui-section/SignUpPage';
+
 
 export default function App() {
   return (
@@ -33,11 +35,11 @@ export default function App() {
           exact
           render={(routerProps) => <Getaways {...routerProps} />}
         />
-        <Route
+        {/* <Route
           path=":id"
           exact
           render={(routerProps) => <Getaways {...routerProps} />}
-        />
+        /> */}
       </Router>
      
     </div>
