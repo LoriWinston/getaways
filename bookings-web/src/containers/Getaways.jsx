@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getPlaces } from '../services/placesApi';
 import PlaceList from '../components/places/PlaceList';
+import style from '../components/app/App.css';
 
 const Getaways = () => {
   const [places, setPlaces] = useState([]);

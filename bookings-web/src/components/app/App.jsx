@@ -17,7 +17,7 @@ export default function App() {
             exact
             render={(routerProps) => <HomePage {...routerProps} />}
           />
-        </Switch>
+          </Switch>
         <Route
           path="/login"
           exact
@@ -33,7 +33,13 @@ export default function App() {
           exact
           render={(routerProps) => <Getaways {...routerProps} />}
         />
+        <Route
+          path=":id"
+          exact
+          render={(routerProps) => <Getaways {...routerProps} />}
+        />
       </Router>
+     
     </div>
   );
 }
