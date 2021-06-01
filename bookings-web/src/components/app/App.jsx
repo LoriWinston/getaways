@@ -2,10 +2,12 @@ import React from 'react';
 import '../app/App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Getaways from '../../containers/Getaways';
+import GetawaysDetail from '../../containers/GetawaysDetail';
 import Header from '../ui-section/Header';
 import LoginPage from '../ui-section/LoginPage';
 import HomePage from '../ui-section/HomePage';
 import SignUpPage from '../ui-section/SignUpPage';
+
 
 
 export default function App() {
@@ -19,7 +21,6 @@ export default function App() {
             exact
             render={(routerProps) => <HomePage {...routerProps} />}
           />
-          </Switch>
         <Route
           path="/login"
           exact
@@ -35,11 +36,12 @@ export default function App() {
           exact
           render={(routerProps) => <Getaways {...routerProps} />}
         />
-        {/* <Route
-          path=":id"
+        <Route
+          path="/:id"
           exact
-          render={(routerProps) => <Getaways {...routerProps} />}
-        /> */}
+          render={(routerProps) => <GetawaysDetail {...routerProps} />}
+        />
+         </Switch>
       </Router>
      
     </div>
